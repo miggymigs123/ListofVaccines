@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine List Section</title>
+    <link rel="stylesheet" href="listOfVaccines.css">
+</head>
+<body>
+    <div class="vaccine-list-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" role="complementary">
+            <nav class="navigation" role="navigation" aria-label="Main Navigation">
+                <img src="logo.png" alt="Logo" class="nav-icon">
+                
+                <!-- Profile Section -->
+                <section class="profile-section">
+                    <div class="profile-card">
+                        <div class="profile-icon" aria-hidden="true">Logo</div>
+                        <div class="profile-info">
+                            <h2 class="barangay-name">Brgy. Ugac Sur</h2>
+                            <p class="account-status">Account In Use</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation Links -->
+                <hr class="divider">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-item"><img src="assest2/dashboardlayout.png" alt="Dashboard Icon" class="nav-item-icon">Dashboard</a></li>
+                    <li><a href="#" class="nav-item active"><img src="assest2/syringe.png" alt="Vaccine List Icon" class="nav-item-icon">List of Vaccines</a></li>
+                    <li><a href="#" class="nav-item"><img src="assest2/adminsettingsmale.png" alt="Manage Profiles Icon" class="nav-item-icon">Manage Profiles</a></li>
+                    <li><a href="#" class="nav-item"><img src="assest2/project.png" alt="Immunization Programs Icon" class="nav-item-icon">Immunization Programs</a></li>
+                </ul>
+                
+                <!-- Calendar Widget -->
+                <hr class="divider">
+                <section class="calendar-widget">
+                    <h3 class="widget-title">Calendar</h3>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <div class="month-selector">
+                                <label for="month-selector" class="selector-text">Month</label>
+                                <img src="dropdown.png" alt="Month Dropdown" class="dropdown-icon">
+                            </div>
+                            <div class="year-selector">
+                                <label for="year-selector" class="selector-text">Year</label>
+                                <img src="dropdown.png" alt="Year Dropdown" class="dropdown-icon">
+                            </div>
+                        </div>
+                        <div class="calendar-navigation">
+                            <button class="nav-button prev" aria-label="Previous Month"><img src="prev.png" alt="Previous Month"></button>
+                            <button class="nav-button next" aria-label="Next Month"><img src="next.png" alt="Next Month"></button>
+                        </div>
+                        <div class="calendar-grid">
+                            <!-- Dynamic Calendar -->
+                        </div>
+                    </div>
+                </section>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <header class="page-header">
+                <img src="assest2/header_logo.png" alt="Header Logo" class="header-logo">
+            </header>
+
+            <section class="vaccine-list-section">
+                <div class="search-bar">
+                    <h1 class="section-title">Vaccine List</h1>
+                    <form class="search-form" role="search">
+                        <label for="search-input" class="visually-hidden">Search Name</label>
+                        <input type="search" id="search-input" class="search-input" placeholder="Search Name..." aria-label="Search for a vaccine">
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+
+                <ul class="vaccine-list">
+                    <li class="vaccine-item">
+                        <div class="vaccine-card">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">ORAL POLIO VACCINE</h2>
+                            <img src="oral-polio.png" alt="Oral Polio Vaccine Icon" class="vaccine-image">
+                        </div>
+                    </li>
+                    <li class="vaccine-item">
+                        <div class="vaccine-card">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">HEPATITIS B VACCINE</h2>
+                            <img src="hepatitis-b.png" alt="Hepatitis B Vaccine Icon" class="vaccine-image">
+                        </div>
+                    </li>
+                    <!-- Additional vaccine items -->
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
