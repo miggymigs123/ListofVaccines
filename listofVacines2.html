@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine List Section</title>
+    <link rel="stylesheet" href="ListOfVaccines2.css">
+</head>
+<body>
+    <div class="vaccine-list-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" role="complementary">
+            <nav class="navigation" role="navigation" aria-label="Main Navigation">
+                <!-- Profile Section -->
+                <section class="profile-section">
+                    <div class="profile-card">
+                        <div class="profile-icon" aria-hidden="true">Logo</div>
+                        <div class="profile-info">
+                            <h2 class="barangay-name">Brgy. Ugac Sur</h2>
+                            <p class="account-status">Account In Use</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation Links -->
+                <hr class="divider">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-item"><img src="assest2/dashboardlayout.png" alt="Dashboard Icon" class="nav-item-icon" loading="lazy">Dashboard</a></li>
+                    <li><a href="#" class="nav-item active"><img src="assest2/syringe.png" alt="Vaccine List Icon" class="nav-item-icon" loading="lazy">List of Vaccines</a></li>
+                    <li><a href="#" class="nav-item"><img src="assest2/adminsettingsmale.png" alt="Manage Profiles Icon" class="nav-item-icon" loading="lazy">Manage Profiles</a></li>
+                    <li><a href="#" class="nav-item"><img src="assest2/project.png" alt="Immunization Programs Icon" class="nav-item-icon" loading="lazy">Immunization Programs</a></li>
+                </ul>
+                
+                <!-- Calendar Widget -->
+                <hr class="divider">
+                <section class="calendar-widget">
+                    <h3 class="widget-title">Calendar</h3>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <div class="month-selector">
+                                <label for="month-selector" class="selector-text">Month</label>
+                                <select id="month-selector">
+                                    <option value="0">January</option>
+                                    <option value="1">February</option>
+                                    <option value="2">March</option>
+                                    <option value="3">April</option>
+                                    <option value="4">May</option>
+                                    <option value="5">June</option>
+                                    <option value="6">July</option>
+                                    <option value="7">August</option>
+                                    <option value="8">September</option>
+                                    <option value="9">October</option>
+                                    <option value="10">November</option>
+                                    <option value="11">December</option>
+                                </select>
+                            </div>
+                            <div class="year-selector">
+                                <label for="year-selector" class="selector-text">Year</label>
+                                <select id="year-selector"></select>
+                            </div>
+                        </div>
+                        <div class="calendar-navigation">
+                            <button class="nav-button prev" aria-label="Previous Month"><img src="assest2/leftArrow.png" alt="Previous Month" loading="lazy"></button>
+                            <button class="nav-button next" aria-label="Next Month"><img src="assest2/rightArrow.png" alt="Next Month" loading="lazy"></button>
+                        </div>
+                        <div class="calendar-grid"></div>
+                    </div>
+                </section>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <header class="page-header">
+                <img src="assest2/header_logo.png" alt="Header Logo" class="header-logo" loading="lazy">
+            </header>
+
+            <section class="vaccine-list-section">
+                <div class="search-bar">
+                    <h1 class="section-title">Vaccine List</h1>
+                    <form class="search-form" role="search">
+                        <label for="search-input" class="visually-hidden">Search Name</label>
+                        <input type="search" id="search-input" class="search-input" placeholder="Search Name..." aria-label="Search for a vaccine">
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+            
+                <!-- Vaccine list -->
+                <ul class="vaccine-list">
+                    <li class="vaccine-item">
+                        <div class="vaccine-card" onclick="toggleDescription('desc1')">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">Oral Polio Vaccine</h2>
+                        </div>
+                        <div id="desc1" class="vaccine-description">
+                            <p><h4>Protection from: Poliovirus <br>
+                            When to give: 6, 10 and 14 weeks </h4>  Oral Polio Vaccine (OPV) protects against poliomyelitis, a disease caused by the poliovirus. Polio is a virus that paralyzes 1 in 200 people who get infected. Among those cases, 5 to 10 per cent die when their breathing muscles are paralyzed. There is no cure for polio once the paralysis sets in.</p>
+                        </div>
+                    </li>
+                    <li class="vaccine-item">
+                        <div class="vaccine-card" onclick="toggleDescription('desc2')">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">Hepatitis B Vaccine</h2>
+                        </div>
+                        <div id="desc2" class="vaccine-description">
+                            <p><h4>Protection From: Hepatitis B <br>
+                                When to give: At birth</h4>  
+                                Hepatitis B virus is a dangerous liver infection that, when caught as an infant, often shows no symptoms for decades. It can develop into cirrhosis and liver cancer later in life. Children less than 6 years old who become infected with the hepatitis B virus are the most likely to develop chronic infections.</p>
+                        </div>
+                    </li>
+                    <li class="vaccine-item">
+                        <div class="vaccine-card" onclick="toggleDescription('desc4')">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">Pentavalent Vaccine</h2>
+                        </div>
+                        <div id="desc4" class="vaccine-description">
+                            <p><h4>Protect From: Diphtheria, Pertussis, Tetanus, Haemophilus Influenzae type b and Hepatitis B  <br>
+                                When to give: 6, 10 and 14 weeks </h4>Diphtheria infects the nose, throat, tonsils, and skin, potentially causing obstructive pseudo-membranes that hinder breathing and swallowing, and can lead to paralysis, heart failure, kidney failure, or death.
+
+                                Pertussis (whooping cough) results in severe coughing spells lasting weeks, which may cause breathing difficulties, pneumonia, and death.
+                                
+                                Tetanus causes painful muscle contractions, including lockjaw, making it hard for children to open their mouths or breathe, and can be fatal even with treatment.
+                                
+                                Haemophilus influenzae type b can lead to meningitis and pneumonia in infants and young children, with transmission occurring via respiratory droplets.
+                                
+                                80–90% of infants infected with Hepatitis B in their first year develop chronic infections.</p>
+                        </div>
+                    </li>
+                    <li class="vaccine-item">
+                        <div class="vaccine-card" onclick="toggleDescription('desc5')">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">Bacillus Calmette-Guérin Vaccine (BCG)</h2>
+                        </div>
+                        <div id="desc5" class="vaccine-description">
+                            <p><h4>Protection From: Tuberculosis <br>
+                                When to give: At birth</h4> 
+                                Tuberculosis (TB) is an infection that most often attacks the lungs. In infants and young children, it affects other parts of the body like the brain, bones, joints and other internal organs (extrapulmonary or miliary tuberculosis). A severe case could cause serious complications or death. The BGC vaccine has a protective effect against meningitis and disseminated TB in children.
+                                
+                                TB is very difficult to treat when contracted, and treatment is lengthy and not always successful. According to the 2020 World Health Organization global TB report, the Philippines has the highest TB incidence rate in Asia, with 554 cases for every 100,000 Filipinos.</p>
+                        </div>
+                    </li>
+                    <li class="vaccine-item">
+                        <div class="vaccine-card" onclick="toggleDescription('desc6')">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">Pneumococcal Conjugate Vaccine (PCV)</h2>
+                        </div>
+                        <div id="desc6" class="vaccine-description">
+                            <p><h4>Protection from: Pneumonia and Meningitis<br>
+                                When to give: 6, 10 and 14 weeks </h4> 
+                                Pneumococcal diseases such as pneumonia and meningitis are a common cause of sickness and death worldwide, especially among young children under 2 years old.</p>
+                        </div>
+                    </li>
+                    <li class="vaccine-item">
+                        <div class="vaccine-card" onclick="toggleDescription('desc7')">
+                            <div class="vaccine-icon"></div>
+                            <h2 class="vaccine-name">Measles, Mumps, Rubella Vaccine (MMR)</h2>
+                        </div>
+                        <div id="desc7" class="vaccine-description">
+                            <p> <h4>Protection From: Measles, Mumps and Rubella <br>When to give: 9 months and 1 year old  </h4>
+                                Measles is a highly contagious disease characterized by fever, runny nose, white spots in the mouth, and a rash. Complications can include ear infections, diarrhea, pneumonia, and in severe cases, blindness, brain swelling, or death.
+                                Mumps causes headache, malaise, fever, and swollen salivary glands, with complications like meningitis, testicular inflammation, and deafness.
+                                Rubella is usually mild in children and adults but can lead to miscarriage, stillbirth, or birth defects in pregnant women (Congenital Rubella Syndrome).</p>
+                        </div>
+                    </li>
+
+                    <!-- Additional vaccine items go here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript for the Calendar -->
+    <script>
+        const calendarGrid = document.querySelector('.calendar-grid');
+        const monthSelector = document.getElementById('month-selector');
+        const yearSelector = document.getElementById('year-selector');
+        const prevButton = document.querySelector('.nav-button.prev');
+        const nextButton = document.querySelector('.nav-button.next');
+        let currentDate = new Date();
+
+        function populateYearOptions() {
+            const currentYear = new Date().getFullYear();
+            for (let year = currentYear - 10; year <= currentYear + 10; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                if (year === currentYear) {
+                    option.selected = true;
+                }
+                yearSelector.appendChild(option);
+            }
+        }
+
+        function updateCalendarGrid(year, month) {
+            calendarGrid.innerHTML = ''; // Clear the grid
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDay = new Date(year, month, 1).getDay();
+
+            // Create blank days for the first week
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.classList.add('calendar-day', 'empty');
+                calendarGrid.appendChild(emptyCell);
+            }
+
+            // Populate days of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.classList.add('calendar-day');
+                dayCell.textContent = day;
+                calendarGrid.appendChild(dayCell);
+            }
+        }
+
+        function updateCalendar() {
+            const selectedMonth = parseInt(monthSelector.value, 10);
+            const selectedYear = parseInt(yearSelector.value, 10);
+            updateCalendarGrid(selectedYear, selectedMonth);
+        }
+
+        function navigateMonth(step) {
+            currentDate.setMonth(currentDate.getMonth() + step);
+            monthSelector.value = currentDate.getMonth();
+            yearSelector.value = currentDate.getFullYear();
+            updateCalendar();
+        }
+
+        // Populate the year options
+        populateYearOptions();
+
+        // Initialize calendar grid
+        updateCalendarGrid(currentDate.getFullYear(), currentDate.getMonth());
+
+        // Event listeners for navigation and selection
+        monthSelector.addEventListener('change', updateCalendar);
+        yearSelector.addEventListener('change', updateCalendar);
+
+        prevButton.addEventListener('click', () => navigateMonth(-1));
+        nextButton.addEventListener('click', () => navigateMonth(1));
+
+        function toggleDescription(id) {
+            const desc = document.getElementById(id);
+            desc.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
